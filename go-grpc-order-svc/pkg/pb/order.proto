@@ -1,0 +1,22 @@
+
+syntax = "proto3";
+option go_package = ".;pb";  // 当前目录下，直接 make api，用这个
+package order;
+
+
+service OrderService {
+    rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse) {}
+}
+
+// 创建订单
+message CreateOrderRequest {
+    int64 product_id = 1;
+    int64 quantity = 2;
+    int64 user_id = 3;
+}
+
+message CreateOrderResponse {
+    int64 status = 1;
+    string error = 2;
+    int64 id = 3;    
+}

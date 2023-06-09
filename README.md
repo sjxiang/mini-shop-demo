@@ -22,3 +22,10 @@ mysql> show databases;
 # 架构图
 
 <img src="doc/images/arch.jpg" width="500" height="400">
+
+```text
+
+proto 文件要保持一致
+
+
+```

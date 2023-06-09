@@ -16,7 +16,7 @@ type Config struct {
 func LoadConfig() (c Config, err error) {
 
 	// 绝对路径，拼接
-	path := filepath.Join(GetExecDirectory(), "go-grpc-api-gateway/pkg/config/envs/dev.env")
+	path := filepath.Join("D:/workspace/src/mini-shop-demo/", "go-grpc-api-gateway/pkg/config/envs/dev.env")
 
 	viper.SetConfigFile(path)
 

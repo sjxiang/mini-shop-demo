@@ -2,6 +2,7 @@ package auth
 
 import (
 	"context"
+	"log"
 	"net/http"
 	"strings"
 
@@ -55,6 +56,8 @@ func (m AuthMiddlewareBuilder) Build() gin.HandlerFunc {
 			return
 		}
 
+		log.Println("访问日志", res.UserId)
+		
 		ctx.Set("user_id", res.UserId)
 
 		ctx.Next()

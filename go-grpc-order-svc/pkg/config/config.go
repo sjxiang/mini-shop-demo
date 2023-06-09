@@ -1,7 +1,6 @@
 package config
 
 import (
-	"os"
 	"path/filepath"
 
 	"github.com/spf13/viper"
@@ -9,14 +8,14 @@ import (
 
 type Config struct {
 	Port          string `mapstructure:"PORT"`
-	JWTSecretKey  string `mapstructure:"JWT_SRCRET_KEY"`
 	DBUrl         string `mapstructure:"DB_URL"`
+	ProductSvcUrl string `mapstructure:"PRODUCT_SVC_URL"`
 }
 
 func LoadConfig() (c Config, err error) {
 
 	// 绝对路径，拼接
-	path := filepath.Join("D:/workspace/src/mini-shop-demo/go-grpc-auth-svc/pkg", "config/envs/dev.env")
+	path := filepath.Join("D:/workspace/src/mini-shop-demo/go-grpc-order-svc/pkg", "config/envs/dev.env")
 	println(path)
 	
 	viper.SetConfigFile(path)
@@ -33,11 +32,3 @@ func LoadConfig() (c Config, err error) {
 	return
 }
 
-// 获取当前执行程序目录
-func GetExecDirectory() string {
-	file, err := os.Getwd()
-	if err != nil {
-		return ""
-	}
-	return file
-}

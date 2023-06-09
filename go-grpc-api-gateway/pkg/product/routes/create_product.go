@@ -23,7 +23,7 @@ func CreateProduct(ctx *gin.Context, c pb.ProductServiceClient) {
 		return
 	}
 
-	res, err := c.CreatePorduct(context.Background(), &pb.CreateProductRequest{
+	res, err := c.CreateProduct(context.Background(), &pb.CreateProductRequest{
 		Name:  body.Name,
 		Stock: body.Stock,
 		Price: body.Price,

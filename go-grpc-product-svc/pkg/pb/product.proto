@@ -1,7 +1,6 @@
 
 syntax = "proto3";
-
-option go_package = "./go-grpc-api-gateway/pkg/product/pb";  // 当前目录下
+option go_package = ".;pb";  // 当前目录下，直接 make api，用这个
 
 package product;
 
@@ -30,7 +29,7 @@ message FindOneData {
     int64 id = 1;
     string name = 2;
     string sku = 3;
-    int64 stock = 4;  
+    int64 stock = 4;
     int64 price = 5;
 }
 message FindOneRequest {
