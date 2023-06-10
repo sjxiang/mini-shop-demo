@@ -5,7 +5,7 @@
 
 ## 架构图
 
-<img src="doc/images/arch.jpg" width="500" height="400">
+<img src="./doc/images/arch.jpg" width="500" height="400">
 
 
 ```text
