@@ -9,6 +9,8 @@ Product 服务：添加商品、扣减库存、查找商品
 Order 服务：创建订单
 
 
+```
+
 mysql> show databases;
 +--------------------+
 | Database           |
@@ -17,7 +19,7 @@ mysql> show databases;
 | order_svc          |
 | product_svc        |
 +--------------------+
-
+```
 
 # 架构图
 
@@ -26,6 +28,5 @@ mysql> show databases;
 ```text
 
 proto 文件要保持一致
-
 
 ```

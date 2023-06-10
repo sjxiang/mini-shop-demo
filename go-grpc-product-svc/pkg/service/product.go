@@ -15,7 +15,7 @@ type Server struct {
 	pb.UnimplementedProductServiceServer
 }
 
-func (s *Server) CreatePorduct(ctx context.Context, req *pb.CreateProductRequest) (*pb.CreateProductResponse, error) {
+func (s *Server) CreateProduct(ctx context.Context, req *pb.CreateProductRequest) (*pb.CreateProductResponse, error) {
 	var product model.Product
 
 	product.Name  = req.Name
